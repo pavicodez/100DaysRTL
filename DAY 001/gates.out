@@ -1,0 +1,123 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000172f8ae8fd0 .scope module, "basic_gates_tb" "basic_gates_tb" 2 1;
+ .timescale 0 0;
+v00000172f8b3ba20_0 .var "a", 0 0;
+v00000172f8b3d780_0 .net "and_d", 0 0, L_00000172f8ada930;  1 drivers
+v00000172f8b3c7e0_0 .net "and_s", 0 0, L_00000172f8ada7e0;  1 drivers
+v00000172f8b3bfc0_0 .var "b", 0 0;
+v00000172f8b3bf20_0 .net "nand_d", 0 0, L_00000172f8adaa80;  1 drivers
+v00000172f8b3c920_0 .net "nand_s", 0 0, L_00000172f8ada9a0;  1 drivers
+v00000172f8b3bb60_0 .net "nor_d", 0 0, L_00000172f8ada690;  1 drivers
+v00000172f8b3cc40_0 .net "nor_s", 0 0, L_00000172f8adaa10;  1 drivers
+v00000172f8b3c100_0 .net "not_d", 0 0, L_00000172f8adabd0;  1 drivers
+v00000172f8b3d280_0 .net "not_s", 0 0, L_00000172f8b3f770;  1 drivers
+v00000172f8b3d000_0 .net "or_d", 0 0, L_00000172f8ada770;  1 drivers
+v00000172f8b3c060_0 .net "or_s", 0 0, L_00000172f8ada700;  1 drivers
+v00000172f8b3cba0_0 .net "xnor_d", 0 0, L_00000172f8ada850;  1 drivers
+v00000172f8b3d0a0_0 .net "xnor_s", 0 0, L_00000172f8b3ea50;  1 drivers
+v00000172f8b3d320_0 .net "xor_d", 0 0, L_00000172f8ada620;  1 drivers
+v00000172f8b3ca60_0 .net "xor_s", 0 0, L_00000172f8adab60;  1 drivers
+S_00000172f8ae9160 .scope module, "dflow" "basic_gates_dataflow" 2 7, 3 2 0, S_00000172f8ae8fd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "and_out";
+    .port_info 3 /OUTPUT 1 "or_out";
+    .port_info 4 /OUTPUT 1 "nand_out";
+    .port_info 5 /OUTPUT 1 "nor_out";
+    .port_info 6 /OUTPUT 1 "xor_out";
+    .port_info 7 /OUTPUT 1 "xnor_out";
+    .port_info 8 /OUTPUT 1 "not_a";
+L_00000172f8ada930 .functor AND 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<1>, C4<1>;
+L_00000172f8ada770 .functor OR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8ada5b0 .functor AND 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<1>, C4<1>;
+L_00000172f8adaa80 .functor NOT 1, L_00000172f8ada5b0, C4<0>, C4<0>, C4<0>;
+L_00000172f8ada4d0 .functor OR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8ada690 .functor NOT 1, L_00000172f8ada4d0, C4<0>, C4<0>, C4<0>;
+L_00000172f8ada620 .functor XOR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8ada8c0 .functor XOR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8ada850 .functor NOT 1, L_00000172f8ada8c0, C4<0>, C4<0>, C4<0>;
+L_00000172f8adabd0 .functor NOT 1, v00000172f8b3ba20_0, C4<0>, C4<0>, C4<0>;
+v00000172f8ad9ce0_0 .net *"_ivl_14", 0 0, L_00000172f8ada8c0;  1 drivers
+v00000172f8ada000_0 .net *"_ivl_4", 0 0, L_00000172f8ada5b0;  1 drivers
+v00000172f8ad9d80_0 .net *"_ivl_8", 0 0, L_00000172f8ada4d0;  1 drivers
+v00000172f8ad9920_0 .net "a", 0 0, v00000172f8b3ba20_0;  1 drivers
+v00000172f8ad9880_0 .net "and_out", 0 0, L_00000172f8ada930;  alias, 1 drivers
+v00000172f8ada0a0_0 .net "b", 0 0, v00000172f8b3bfc0_0;  1 drivers
+v00000172f8ada280_0 .net "nand_out", 0 0, L_00000172f8adaa80;  alias, 1 drivers
+v00000172f8ada320_0 .net "nor_out", 0 0, L_00000172f8ada690;  alias, 1 drivers
+v00000172f8ad9560_0 .net "not_a", 0 0, L_00000172f8adabd0;  alias, 1 drivers
+v00000172f8ad99c0_0 .net "or_out", 0 0, L_00000172f8ada770;  alias, 1 drivers
+v00000172f8ad9b00_0 .net "xnor_out", 0 0, L_00000172f8ada850;  alias, 1 drivers
+v00000172f8ad9ba0_0 .net "xor_out", 0 0, L_00000172f8ada620;  alias, 1 drivers
+S_00000172f8add090 .scope module, "struc" "basic_gates_structural" 2 14, 4 1 0, S_00000172f8ae8fd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "and_out";
+    .port_info 3 /OUTPUT 1 "or_out";
+    .port_info 4 /OUTPUT 1 "nand_out";
+    .port_info 5 /OUTPUT 1 "nor_out";
+    .port_info 6 /OUTPUT 1 "xor_out";
+    .port_info 7 /OUTPUT 1 "xnor_out";
+    .port_info 8 /OUTPUT 1 "not_a";
+L_00000172f8ada7e0 .functor AND 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<1>, C4<1>;
+L_00000172f8ada700 .functor OR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8ada9a0 .functor NAND 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<1>, C4<1>;
+L_00000172f8adaa10 .functor NOR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8adab60 .functor XOR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8b3ea50 .functor XNOR 1, v00000172f8b3ba20_0, v00000172f8b3bfc0_0, C4<0>, C4<0>;
+L_00000172f8b3f770 .functor NOT 1, v00000172f8b3ba20_0, C4<0>, C4<0>, C4<0>;
+v00000172f8ad96a0_0 .net "a", 0 0, v00000172f8b3ba20_0;  alias, 1 drivers
+v00000172f8ad9740_0 .net "and_out", 0 0, L_00000172f8ada7e0;  alias, 1 drivers
+v00000172f8ad97e0_0 .net "b", 0 0, v00000172f8b3bfc0_0;  alias, 1 drivers
+v00000172f8ad9a60_0 .net "nand_out", 0 0, L_00000172f8ada9a0;  alias, 1 drivers
+v00000172f8ad9e20_0 .net "nor_out", 0 0, L_00000172f8adaa10;  alias, 1 drivers
+v00000172f8ad9ec0_0 .net "not_a", 0 0, L_00000172f8b3f770;  alias, 1 drivers
+v00000172f8ad9f60_0 .net "or_out", 0 0, L_00000172f8ada700;  alias, 1 drivers
+v00000172f8b3cec0_0 .net "xnor_out", 0 0, L_00000172f8b3ea50;  alias, 1 drivers
+v00000172f8b3bac0_0 .net "xor_out", 0 0, L_00000172f8adab60;  alias, 1 drivers
+    .scope S_00000172f8ae8fd0;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "basic_gates.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000172f8ae8fd0 {0 0 0};
+    %vpi_call 2 24 "$display", " a b | DF_AND ST_AND | DF_OR ST_OR | ... | DF_NOT ST_NOT" {0 0 0};
+    %vpi_call 2 25 "$monitor", " %b %b |   %b     %b   |   %b   %b  | ... |   %b     %b", v00000172f8b3ba20_0, v00000172f8b3bfc0_0, v00000172f8b3d780_0, v00000172f8b3c7e0_0, v00000172f8b3d000_0, v00000172f8b3c060_0, v00000172f8b3c100_0, v00000172f8b3d280_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000172f8b3ba20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000172f8b3bfc0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000172f8b3ba20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000172f8b3bfc0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000172f8b3ba20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000172f8b3bfc0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000172f8b3ba20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000172f8b3bfc0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 32 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "basic_gates_tb.v";
+    "basic_gates_dataflow.v";
+    "basic_gates_structural.v";
